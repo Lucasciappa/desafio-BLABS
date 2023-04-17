@@ -5,7 +5,7 @@ import Link from "next/link";
 
 export async function getStaticProps(): Promise<HomeGetStaticProps> {
 
-  const url = `${process.env.API_URL}/photos`;
+  const url = `https://jsonplaceholder.typicode.com/photos`;
 
   const res = await fetch(url);
   if (!res.ok) throw new Error('failed to fetch data')
@@ -31,7 +31,7 @@ export default function Home(props: ImagesProps): JSX.Element {
           site_name: "Challenge BLABS - Image Gallery",
           images: [
             {
-              url: `${process.env.NEXT_PUBLIC_DOMAIN}/og-image.png`,
+              url: `https://desafio-blabs.vercel.app/og-image.png`,
               width: 1280,
               height: 800,
               alt: "Challenge BLABS - Image Gallery",

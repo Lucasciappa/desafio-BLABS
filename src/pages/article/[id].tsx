@@ -25,7 +25,7 @@ const ArticlePage: NextPage<Props> = ({ article }) => {
 
 export const getStaticPaths: GetStaticPaths = async () => {
 
-    const url = `${process.env.API_URL}/photos`;
+    const url = `https://jsonplaceholder.typicode.com/photos`;
     const res = await fetch(url);
     const data: ImageProps[] = await res.json();
     const paths = data?.map(article => {
@@ -43,7 +43,7 @@ export const getStaticPaths: GetStaticPaths = async () => {
 export const getStaticProps: GetStaticProps = async ({ params }) => {
 
     const { id } = params as { id: string };
-    const url = `${process.env.API_URL}/photos`;
+    const url = `https://jsonplaceholder.typicode.com/photos`;
     const res = await fetch(`${url}/${id}/`);
     const data = await res.json();
 

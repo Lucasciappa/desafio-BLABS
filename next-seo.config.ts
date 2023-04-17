@@ -3,17 +3,17 @@ import { DefaultSeoProps } from 'next-seo';
 export const SEO: DefaultSeoProps = {
   title: "Challenge BLABS - Image Gallery",
   description: "Image Gallery desc",
-  canonical: `${process.env.NEXT_PUBLIC_DOMAIN}`,
+  canonical: `https://desafio-blabs.vercel.app`,
   openGraph: {
     type: "website",
     locale: "es_AR",
-    url: `${process.env.NEXT_PUBLIC_DOMAIN}`,
+    url: `https://desafio-blabs.vercel.app`,
     site_name: "Image Gallery",
     title: "Image Gallery",
     description: "Image Gallery desc",
     images: [
       {
-        url:`${process.env.NEXT_PUBLIC_DOMAIN}/og-image.png`,
+        url:`https://desafio-blabs.vercel.app/og-image.png`,
         width: 1280,
         height: 800,
         alt: "BLABS Challenge - Image Gallery",
@@ -24,7 +24,7 @@ export const SEO: DefaultSeoProps = {
   additionalLinkTags: [
     {
       rel: "icon",
-      href: `${process.env.NEXT_PUBLIC_DOMAIN}/favicon.ico`
+      href: `https://desafio-blabs.vercel.app/favicon.ico`
     }
   ]
 };
