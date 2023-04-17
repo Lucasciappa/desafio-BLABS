@@ -43,10 +43,8 @@ export const getStaticPaths: GetStaticPaths = async () => {
 export const getStaticProps: GetStaticProps = async ({ params }) => {
 
     const { id } = params as { id: string };
-
     const url = `${process.env.API_URL}/photos`;
     const res = await fetch(`${url}/${id}/`);
-
     const data = await res.json();
 
     return {
